@@ -1,0 +1,35 @@
+{
+    "manifest_version" : 2,
+    "name" : "__MSG_extensionName__",
+    "author" : "tukapiyo",
+    "developer" : {
+        "name" : "tukapiyo",
+        "url" : "https://www2.filewo.net/"
+    },
+    "description" : "__MSG_extensionDescription__",
+    "version" : "1.0.0",
+    "applications" : {
+        "gecko" : {
+            "id" : "openinsametab@filewo.net",
+            "strict_min_version" : "57.0"
+        }
+    },
+
+    "icons" : {
+        "48" : "images/logo.svg",
+        "96" : "images/logo.svg"
+    },
+
+    "default_locale" : "en",
+
+    "background" : {
+        "scripts" : [
+            "/scripts/openinsametab-background.js"
+        ]
+    },
+
+    "permissions" : [
+        "tabs",
+        "contextMenus"
+    ]
+}

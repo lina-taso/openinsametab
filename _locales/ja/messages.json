@@ -1,0 +1,15 @@
+{
+    //
+    // Addon info
+    //
+    "extensionName" : {
+        "message" : "新しいタブで開かない"
+    },
+    "extensionDescription" : {
+        "message" : "リンクを同じタブで開きます。"
+    },
+
+    "openlink" : {
+        "message" : "リンクを同じタブで開く(&E)"
+    }
+}

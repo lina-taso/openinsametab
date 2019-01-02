@@ -1,0 +1,15 @@
+{
+    //
+    // Addon info
+    //
+    "extensionName" : {
+        "message" : "Open Not in New Tab"
+    },
+    "extensionDescription" : {
+        "message" : "Open link in same tab."
+    },
+
+    "openlink" : {
+        "message" : "Op&en Link in Same Tab"
+    }
+}
