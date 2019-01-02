@@ -8,7 +8,7 @@
 browser.runtime.onStartup.addListener(startup);
 browser.runtime.onInstalled.addListener(install);
 
-const firstrun_url = 'https://www2.filewo.net/wordpress/category/twit-side-addon/';
+const firstrun_url = 'https://www2.filewo.net/wordpress/category/open-not-in-new-tab/';
 
 function startup()
 {
