@@ -11,5 +11,13 @@
 
     "openlink" : {
         "message" : "リンクを同じタブで開く(&E)"
+    },
+
+    // options
+    "options_enable_shortcut" : {
+        "message" : "ショートカットキーを有効にします。Ctrl + Shiftを押しながらリンクをクリックすると、リンクを同じタブで開きます。"
+    },
+    "options_refresh_tab" : {
+        "message" : "[注意] 既に開いているタブは、ページをリロードした後にショートカットキーが有効になります。"
     }
 }

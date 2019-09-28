@@ -6,10 +6,18 @@
         "message" : "Open Not in New Tab"
     },
     "extensionDescription" : {
-        "message" : "Open link in same tab."
+        "message" : "Open link in the same tab."
     },
 
     "openlink" : {
-        "message" : "Op&en Link in Same Tab"
+        "message" : "Op&en Link in the Same Tab"
+    },
+
+    // options
+    "options_enable_shortcut" : {
+        "message" : "Enable the shortcut keys. Click the link with pressing Ctrl + Shift to open link in the same tab."
+    },
+    "options_refresh_tab" : {
+        "message" : "[NOTICE] For tabs that are already open, the shortcut keys will take effect after reloading the page."
     }
 }
