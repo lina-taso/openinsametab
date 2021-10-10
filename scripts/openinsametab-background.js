@@ -83,3 +83,15 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
         break;
     }
 });
+
+browser.storage.local.get().then(async config => {
+    // enable keyboard shortcuts at startup
+    if (config['enable_shortcut'] === true || config['enable_allclick'] === true) {
+        registered_content_script = await browser.contentScripts.register({
+            allFrames : true,
+            matches : ["<all_urls>"],
+            js : [{ file : "/scripts/openinsametab-content.js" }]
+        });
+        console.log(registered_content_script);
+    }
+});
