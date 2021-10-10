@@ -19,7 +19,9 @@ async function loadConfig()
         const id = el.id;
         switch (el.type) {
         case 'checkbox':
-            el.checked = config[id];
+        case 'radio':
+            if (el.id === 'disable_shortcut') break;
+            el.checked = config[id] === true;
             break;
         default:
             el.value = config[id];
@@ -31,23 +33,24 @@ async function loadConfig()
 localization();
 loadConfig();
 
-document.getElementById('enable_shortcut').addEventListener('change', async function() {
-
+document.getElementsByName('enable_option').forEach((e) => { e.addEventListener('change', async function() {
     // checked
-    if (this.checked) {
+    switch (this.id) {
+    case 'disable_shortcut':
+        browser.permissions.remove({ origins : ["<all_urls>"] });
+        await browser.storage.local.set({ 'enable_shortcut' : false, 'enable_allclick' : false });
+        break;
+    case 'enable_shortcut':
+    case 'enable_allclick':
         const result_perm = await browser.permissions.request({ origins : ["<all_urls>"] });
-
         // permission granted
-        if (result_perm)
-            await browser.storage.local.set({ 'enable_shortcut' : true });
+        if (result_perm) {
+            await browser.storage.local.set({ 'enable_shortcut' : this.id === 'enable_shortcut',
+                                              'enable_allclick' : this.id === 'enable_allclick' });
+        }
         // permission denied
         else
-            this.checked = false;
+            document.getElementById('disable_shortcut').checked = true;
+        break;
     }
-    else {
-        await browser.storage.local.set({ 'enable_shortcut' : false });
-        browser.permissions.remove({ origins : ["<all_urls>"] });
-    }
-
-});
-
+})});

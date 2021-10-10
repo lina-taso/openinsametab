@@ -8,15 +8,25 @@
          * { font-size: 100%; }
          p { margin: 8px; }
          p > * { margin: 4px; }
+         [data-string] { white-space: pre-line; }
         </style>
     </head>
 
     <body>
-        <p>
-            <input id="enable_shortcut" type="checkbox">
-            <label for="enable_shortcut" data-string="options_enable_shortcut"></label><br>
-            <span data-string="options_refresh_tab"></span>
-        </p>
+        <table>
+            <tr>
+                <td><input id="disable_shortcut" type="radio" name="enable_option" checked></td>
+                <td><label for="disable_shortcut" data-string="options_disable_shortcut"></label></td>
+            </tr>
+            <tr>
+                <td><input id="enable_shortcut" type="radio" name="enable_option"></td>
+                <td><label for="enable_shortcut" data-string="options_enable_shortcut"></label></td>
+            <tr>
+                <td><input id="enable_allclick" type="radio" name="enable_option"></td>
+                <td><label for="enable_allclick" data-string="options_enable_allclick"></label></td>
+            </tr>
+        </table>
+        <p><span data-string="options_refresh_tab"></span></p>
     </body>
     <script src="options.js"></script>
 </html>

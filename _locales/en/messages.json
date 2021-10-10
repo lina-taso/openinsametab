@@ -14,10 +14,16 @@
     },
 
     // options
+    "options_disable_shortcut" : {
+        "message" : "1. Disable the shortcut keys.\nCan open link in the same tab only from context menu."
+    },
     "options_enable_shortcut" : {
-        "message" : "Enable the shortcut keys. Click the link with pressing Ctrl + Shift to open link in the same tab."
+        "message" : "2. Enable the shortcut keys.\nClick the link with pressing Ctrl + Shift to open link in the same tab."
+    },
+    "options_enable_allclick" : {
+        "message" : "3. Click the link to open link in the same tab.\nClick the link with pressing Ctrl + Shift to open link as usual."
     },
     "options_refresh_tab" : {
-        "message" : "[NOTICE] For tabs that are already open, the shortcut keys will take effect after reloading the page."
+        "message" : "[NOTICE]\n* For tabs that are already open, changes will take effect after reloading the page.\n* When open link in the same tab, referer header isn't sent to website.\nIf you can't browse normally on some website, please open it in the usual way. (If you select option 1 or 2, click the link as usual. If you select option 3, Click the link with pressing Ctrl + Shift.)"
     }
 }
